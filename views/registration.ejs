@@ -1,0 +1,140 @@
+<%- include('parts/header') %> 
+
+<div class="span9">
+    <ul class="breadcrumb">
+		<li><a href="/">Uy</a> <span class="divider">/</span></li>
+		<li class="active">Ro'yxatdan o'tish</li>
+    </ul>
+	<h3> Ro'yxatdan o'tish</h3>	
+	<div class="well">
+	<form class="form-horizontal" method="POST">
+		<h4>Sizning shaxsiy ma'lumotlaringiz</h4>
+		<div class="control-group">
+			<label class="control-label" for="inputFname1">Ism<sup>*</sup></label>
+			<div class="controls">
+			  <input type="text" name="firstname" id="inputFname1" placeholder="Ismingizni kiriting">
+			</div>
+		 </div>
+		<div class="control-group">
+		<label class="control-label" for="input_email">Elektron pochta <sup>*</sup></label>
+		<div class="controls">
+		  <input type="email" name="email" id="input_email"placeholder="Elektron pochtangizni kiriting">
+		</div>
+	  </div>	  
+	<div class="control-group">
+		<label class="control-label" for="inputPassword1">Parol <sup>*</sup></label>
+		<div class="controls">
+		  <input type="password" name="password" id="inputPassword1" placeholder="Parol yozing">
+		</div>
+	  </div>	  
+		<!-- <div class="control-group">
+		<label class="control-label">Tug'ilgan sana<sup>*</sup></label>
+		<div class="controls">
+			<span>kun</span><select class="span1 bday" name="days">
+				<option value="">-</option>
+				<% for(let i = 1; i < 32; i++) { %> 
+					<option value="<%= i %> "><%= i %> </option>
+					<% } %> 
+			</select> 
+			<span>oy</span><select class="span1 bmonth" name="month">
+				<option value="">-</option>
+				<% for(let i = 1; i < 13; i++) { %> 
+					<option value="<%= i %> "><%= i %> </option>
+					<% } %> 
+			</select> 
+			<span>yil</span><select class="span1 byear" name="year">
+				<option value="">-</option>
+				<% for(let i = 2015; i > 1930; i--) { %> 
+					<option value="<%= i %> "><%= i %> </option>
+					<% } %> 
+			</select>
+		</div>
+	  </div> -->
+
+	<div class="alert alert-block alert-error fade in">
+		<button type="button" class="close" data-dismiss="alert">×</button>
+		<strong>RO'YXATDAN</strong> o'tayotganingizda ehtiyot bo'ling. Ma'lumotlaringiz uchinchi qo'llarga tushishiga yo'l qo'ymang
+	 </div>	
+
+		<h4>Siznig manzilingiz</h4>
+		<div class="control-group">
+			<label class="control-label" for="city">Shahar<sup>*</sup></label>
+			<div class="controls">
+			  <input type="text" id="city" name="city" placeholder="Shahringiz"/> 
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="postcode">Karta raqami<sup>*</sup></label>
+			<div class="controls">
+			  <input type="text" name="cardnumber" id="postcode" placeholder="Karta raqamingizni kiriting"/> 
+			  <span>Karta raqamingizni kiritayotganingizda ehtiyot bo'ling, boshqalar qaramayotganiga ishonch hosil qiling</span>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="phone">Uy telefoni<sup>*</sup></label>
+			<div class="controls">
+			  <input type="phone"  name="phone" id="phone" placeholder="phone"/>
+			</div>
+		</div>
+	<div class="control-group">
+			<div class="controls">
+				<input type="hidden" name="email_create" value="1">
+				<input type="hidden" name="is_new_customer" value="1">
+				<input class="btn btn-large btn-success" type="submit" value="Register" />
+			</div>
+		</div>		
+	</form>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<!-- MainBody End ============================= -->
+<!-- Footer ================================================================== -->
+	<div  id="footerSection">
+	<div class="container">
+		<div class="row">
+			<div class="span3">
+				<h5>Akkaunt</h5>
+				<a href="/login">Sizning hisob qaydnomangiz</a>
+				<a href="/login">SHAXSIY MA'LUMOT</a> 
+				<a href="/login">MANZILLAR</a> 
+				<a href="/login">Chegirma</a>  
+				<a href="/login">Buyurtma tarixi</a>
+			 </div>
+			<div class="span3">
+				<h5>MA `LUMOT</h5>
+				<a href="/contact">ALOQA</a>  
+				<a href="/registration">Ro'yxatdan o'tish</a>  
+				<a href="/legal_notice">HUQUQIY XABARLAR</a>  
+				<a href="/tac">FOYDALANISH SHARTLARI</a> 
+				<a href="/faq">TSS</a>
+			 </div>
+			<div class="span3">
+				<h5>BIZNING TAKLIFLARIMIZ</h5>
+				<a href="#">YANGI MAHSULOTLAR</a> 
+				<a href="#">Eng yaxshi sotuvchilar</a>  
+				<a href="/special_offer">MAXSUS TAKLIFLAR</a>  
+				<a href="#">ISHLAB CHIQARUVCHILAR</a> 
+				<a href="#">TA'MINLOVCHILAR</a> 
+			 </div>
+			<div id="socialMedia" class="span3 pull-right">
+				<h5>IJTIOMIY TARMOQLAR</h5>
+				<a href="#"><img width="60" height="60" src="/images/facebook.png" title="facebook" alt="facebook"/></a>
+				<a href="#"><img width="60" height="60" src="/images/twitter.png" title="twitter" alt="twitter"/></a>
+				<a href="https://www.youtube.com/channel/UCe4YfrLXcjKr4EyT6NXaK3A"><img width="60" height="60" src="/images/youtube.png" title="youtube" alt="youtube"/></a>
+			 </div> 
+		 </div>
+		<p class="pull-right">&copy; AS shop</p>
+	</div><!-- Container End -->
+	</div>
+<!-- Placed at the end of the document so the pages load faster ============================================= -->
+	<script src="/js/jquery.js" type="text/javascript"></script>
+	<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/js/google-code-prettify/prettify.js"></script>
+	
+	<script src="/js/bootshop.js"></script>
+    <script src="/js/jquery.lightbox-0.5.js"></script>
+
+    <%- include('parts/footer') %> 

@@ -1,0 +1,6 @@
+node_modules/
+html/
+themes/
+bootstrap/
+.env
+package-lock.json
